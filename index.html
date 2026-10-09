@@ -146,13 +146,19 @@
   .active .cover-main .rule{ width:clamp(90px,14vw,180px); }
   .cover-foot{ display:flex; justify-content:space-between; align-items:flex-end; gap:2rem;
     flex-wrap:wrap; padding-top:clamp(1rem,3vh,2rem); border-top:1px solid rgba(245,241,235,.16); }
-  .speaker{ display:flex; align-items:center; gap:.9rem; }
-  .speaker img{ width:clamp(64px,8.5vw,90px); height:clamp(64px,8.5vw,90px); border-radius:50%;
-    object-fit:cover; display:block; box-shadow:0 8px 26px rgba(0,0,0,.35); }
-  .speaker .n{ font-weight:800; font-size:clamp(.95rem,1.7vw,1.12rem); color:#fff; letter-spacing:-.01em; }
-  .speaker .r{ font-size:clamp(.7rem,1.35vw,.83rem); color:var(--soya-cl); margin-top:.5rem;
-    max-width:44ch; line-height:1.4; }
-  .roles{ display:flex; flex-wrap:wrap; gap:.45rem; margin-top:.55rem; max-width:56ch; }
+  /* La chapita se ve desde el fondo del aula: todo un talle más grande que en Marín */
+  .speaker{ display:flex; align-items:center; gap:clamp(.9rem,1.6vw,1.4rem); }
+  .speaker img{ width:clamp(76px,10.5vw,138px); height:clamp(76px,10.5vw,138px); border-radius:50%;
+    object-fit:cover; display:block; box-shadow:0 8px 26px rgba(0,0,0,.35); border:3px solid rgba(245,241,235,.85); }
+  .speaker .n{ font-weight:800; font-size:clamp(1.1rem,2.2vw,1.75rem); color:#fff; letter-spacing:-.015em; }
+  .speaker .r{ font-size:clamp(.82rem,1.45vw,1.12rem); color:rgba(245,241,235,.78); margin-top:.6rem;
+    line-height:1.4; }
+  .roles{ display:flex; flex-wrap:wrap; align-items:center; gap:.55rem; margin-top:.6rem; }
+  .speaker .chip{ font-size:clamp(.86rem,1.5vw,1.16rem); }
+  /* diVenuo en su canon B+: el lockup sobre papel, nunca sobre el borgoña */
+  .roles .chip-dv{ display:inline-flex; align-items:center; gap:.55em; color:var(--carbon); background:var(--papel);
+    border-color:var(--papel); font-family:"Work Sans", var(--sans); font-weight:600; padding:.38em .9em .38em .85em; }
+  .roles .chip-dv svg{ height:1.5em; width:auto; aspect-ratio:378/92; display:block; }
   .chip{ font-size:clamp(.78rem,1.4vw,.94rem); font-weight:600; line-height:1;
     color:rgba(245,241,235,.9); background:rgba(245,241,235,.1);
     border:1px solid rgba(245,241,235,.2); padding:.46em .82em; border-radius:999px; white-space:nowrap; }
@@ -433,8 +439,9 @@
               <div class="n">Luciano Esteban</div>
               <div class="roles">
                 <span class="chip chip-hl">Estudiante 5.º año · Ing. en Informática · UCEMA</span>
+                <span class="chip chip-dv">Founder<svg viewBox="10 8 378 92" role="img" aria-label="diVenuo"><use href="#dvlock"/></svg></span>
               </div>
-              <div class="r">Founder @diVenuo · Cybersecurity Architect @Personal · Applied AI Engineer &amp; Ex Software Developer</div>
+              <div class="r">Cybersecurity Architect en Personal · Applied AI Engineer &amp; Ex Software Developer</div>
             </div>
           </div>
           <div class="venue-r">
@@ -484,7 +491,7 @@
       data-titulo="¿Para qué estudiar si la IA programa?"
       data-nota="Preguntarles: ¿quién usó ChatGPT o Claude para una tarea?|La IA escribe código, pero no sabe qué hace falta ni se da cuenta sola cuando se equivoca|Mi trabajo en ciberseguridad: cuidar sistemas de IA. Ese laburo antes no existía|La frase de mi charla en The AI Collective">
       <div class="wrap">
-        <div class="eyebrow anim">La pregunta que todos se hacen</div>
+        <div class="eyebrow anim">La pregunta que todo el mundo se hace</div>
         <h1 class="grande">
           <span class="reveal r1"><span>¿Para qué estudiar,</span></span>
           <span class="reveal r2"><span>si la <span class="acc">IA</span> ya programa?</span></span>
@@ -665,7 +672,7 @@
       <div class="wrap">
         <div class="eyebrow anim">Lo que me hubiera gustado saber a los 17</div>
         <div class="consejos">
-          <div class="consejo paso" data-paso="1"><span class="n">1</span><span>Empezá antes de sentirte listo.</span></div>
+          <div class="consejo paso" data-paso="1"><span class="n">1</span><span>Empezá antes de sentirte list@.</span></div>
           <div class="consejo paso" data-paso="2"><span class="n">2</span><span>Hacé cosas que alguien use.</span></div>
           <div class="consejo paso" data-paso="3"><span class="n">3</span><span>Rodeate de gente que hace.</span></div>
         </div>
