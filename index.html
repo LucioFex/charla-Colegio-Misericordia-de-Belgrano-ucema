@@ -247,7 +247,12 @@
   .luna{ display:inline-flex; align-items:center; gap:.55rem; margin-top:clamp(1rem,2.6vh,1.6rem);
     font-size:clamp(.8rem,1.4vw,1rem); font-weight:800; letter-spacing:.16em; text-transform:uppercase;
     color:var(--borgona); border:1.5px solid rgba(148,0,40,.35); border-radius:999px; padding:.55em 1em; }
-  .luna svg{ width:1.1em; height:1.1em; }
+  .luna svg, .chk svg{ width:1.15em; height:1.15em; fill:none; stroke:currentColor; stroke-width:3;
+    stroke-linecap:round; stroke-linejoin:round; flex:none; }
+  .checks{ display:flex; justify-content:center; flex-wrap:wrap; gap:.7rem; margin-top:clamp(1rem,2.6vh,1.6rem); }
+  .checks .luna{ margin-top:0; }
+  .chip.chk{ display:inline-flex; align-items:center; gap:.4em; color:#fff; border-color:rgba(245,241,235,.4); }
+  .chip.chk svg{ color:var(--oro); }
 
   /* ============ 09 · diVenuo en B+ ============ */
   .dv-cinta{ position:absolute; inset:0; width:100%; height:100%; z-index:1; pointer-events:none;
@@ -558,7 +563,8 @@
             <ul><li>Tópicos Avanzados de IA</li><li>Entrepreneurship Tecnológico</li><li>Proyecto Final Integrador</li></ul></div>
         </div>
         <div class="datos anim a3">
-          <span class="chip">Turno noche</span>
+          <span class="chip chk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 12.5l5 5 10-11"/></svg>Turno noche</span>
+          <span class="chip chk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 12.5l5 5 10-11"/></svg>Horarios continuos</span>
           <span class="chip">1.º y 2.º presenciales, después híbrido</span>
           <span class="chip">Intercambios: Sydney, Monterrey, ITAM</span>
           <span class="chip chip-hl">Próximo inicio: marzo 2027</span>
@@ -569,14 +575,17 @@
     <!-- 08 · ANTES QUE TODOS -->
     <section class="slide field-hueso" data-field="hueso" data-min="2"
       data-titulo="Ya estás trabajando"
-      data-nota="Yo trabajo full time y curso de noche: se puede|Comunidad chica: el profe te conoce por tu nombre|Tus profes trabajan en lo que enseñan, y mañana son tus colegas o tu primer contacto">
+      data-nota="Yo trabajo full time y curso de noche: se puede|Horarios continuos: sin huecos entre materias, clave para estudiar y trabajar|Comunidad chica: el profe te conoce por tu nombre|Tus profes trabajan en lo que enseñan, y mañana son tus colegas o tu primer contacto">
       <div class="wrap">
         <div class="eyebrow anim">Antes de recibirte</div>
         <h1 class="display">
           <span class="reveal r1"><span>Ya estás trabajando.</span></span>
           <span class="reveal r2"><span style="font-size:.6em; display:inline-block; margin-top:.5em; letter-spacing:-.02em">Tus profes <span class="flecha">&rarr;</span> tus colegas.</span></span>
         </h1>
-        <div class="luna anim a2"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 14.6A8.5 8.5 0 0 1 9.4 3.5a8.5 8.5 0 1 0 11.1 11.1Z"/></svg>Se cursa de noche</div>
+        <div class="checks anim a2">
+          <span class="luna"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 12.5l5 5 10-11"/></svg>Se cursa de noche</span>
+          <span class="luna"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 12.5l5 5 10-11"/></svg>Horarios continuos</span>
+        </div>
         <p class="sub anim a3">De día podés trabajar o emprender. Y en una comunidad chica, tu profe, quien fundó una empresa y el contacto que necesitás están a una charla de distancia.</p>
       </div>
     </section>
